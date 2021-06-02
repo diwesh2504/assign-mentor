@@ -19,7 +19,7 @@ export default function Display(){
     const [students,setStudents]=useState([]);
     const [flag,setFlag]=useState(0)
     function fetchData(){
-        fetch(`http://localhost:4040/getmentor`)
+        fetch(`https://assign-mentor-b.herokuapp.com/getmentor`)
         .then(data=>data.json())
         .then(d=>{setMentors(d)})
     }
