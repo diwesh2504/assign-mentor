@@ -14,7 +14,7 @@ export default function CreateStudent(){
             "stud_year":document.getElementById("stud_year").value
         }
         console.log(send_student_data);
-        var r=await fetch('http://localhost:4040/createstudent',{
+        var r=await fetch('https://assign-mentor-b.herokuapp.com/createstudent',{
             method:"POST",
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'

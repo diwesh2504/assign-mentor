@@ -10,10 +10,10 @@ export default function AssignMentor(){
         setOpen(false);
          };
     function fetchData(){
-        fetch("http://localhost:4040/getstudents")
+        fetch("https://assign-mentor-b.herokuapp.com/getstudents")
         .then(data=>data.json())
         .then(d=>{setStudents(d);/*console.log(d)*/})
-        fetch("http://localhost:4040/getmentors")
+        fetch("https://assign-mentor-b.herokuapp.com/getmentors")
         .then(data=>data.json())
         .then(d=>{setMentors(d);/*console.log(d)*/})
     }

@@ -11,10 +11,10 @@ export default function ChangeMentor(){
      setOpen(false);
       };
     function fetchData(){
-        fetch("http://localhost:4040/getstudents")
+        fetch("https://assign-mentor-b.herokuapp.com/getstudents")
         .then(data=>data.json())
         .then(d=>{setStudents(d)})
-        fetch("http://localhost:4040/getmentors")
+        fetch("https://assign-mentor-b.herokuapp.com/getmentors")
         .then(data=>data.json())
         .then(d=>{setMentors(d)})
     }
@@ -30,7 +30,7 @@ export default function ChangeMentor(){
             let student_name=e.target.id.split(",")[2];
             let send_data={mentor_name:mentor.text,mentor_id:mentor.value,old_mentor_id,student_name};
             console.log("Check send data",send_data)
-            let r=await fetch(`http://localhost:4040/changementor/${student_id}`,{
+            let r=await fetch(`https://assign-mentor-b.herokuapp.com/changementor/${student_id}`,{
             method:"POST",
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'
